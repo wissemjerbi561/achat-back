@@ -61,8 +61,8 @@ pipeline {
                             echo "deploying the application"
                             withCredentials([usernamePassword(credentialsId:'dockerhub',usernameVariable:'USER',passwordVariable:'PWD')]) {
                                 sh "echo $PWD | docker login -u $USER --password-stdin"
-                                sh "docker build -t wissemjerbi/spring-app:1.0 ."
-                                sh "docker push wissemjerbi/spring-app:1.0"
+                                sh "docker build -t wissem333/spring-app:1.0 ."
+                                sh "docker push wissem333/spring-app:1.0"
 
                         }
                     }
