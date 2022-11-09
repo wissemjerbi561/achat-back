@@ -9,6 +9,13 @@ pipeline {
                 }
             }
         }
+        stage('mvn test'){
+            steps{
+                script{
+                    sh 'mvn test'
+                }
+            }
+        }
         stage('Compile-package'){
             steps{
                 script{
